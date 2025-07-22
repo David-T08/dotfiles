@@ -1,9 +1,41 @@
 {
+    // No background, they dont overlap
+    "custom/left-arrow": {
+        "format": ""
+    },
+
     "custom/right-arrow": {
         "format": ""
     },
 
-    "custom/left-arrow": {
+    // Left arrows
+    "custom/left-media-arrow": {
         "format": ""
+    },
+
+    "custom/left-user-arrow": {
+        "format": ""
+    },
+    
+    "custom/left-cpu-arrow": {
+        "format": ""
+    },
+
+    "custom/left-memory-arrow": {
+        "format": ""
+    },
+
+    // Right arrows
+    "custom/right-media-arrow": {
+        "format": ""
+    },
+
+    "custom/right-workspace-arrow": {
+        "format": ""
+    },
+
+    "custom/right-clock-arrow": {
+        "format": ""
     }
+
 }

@@ -8,12 +8,14 @@
         "custom/distro",
         "custom/left-arrow",
         "hyprland/workspaces",
-        "custom/right-arrow",
+        "custom/right-workspace-arrow",
+        "clock",
+        "custom/right-clock-arrow",
         "hyprland/window"
     ],
 
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "{name}"
     },
 
     "hyprland/window": {

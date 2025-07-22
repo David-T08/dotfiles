@@ -1,16 +1,39 @@
 {
     "include": [
-        "~/.config/waybar/modules/custom/arrows.jsonc"
+        "~/.config/waybar/modules/custom/arrows.jsonc",
+        "~/.config/waybar/modules/custom/media-control.jsonc"
     ],
 
     "modules-center": [
         "custom/left-arrow",
-        "clock",
+        "custom/previous-track",
+
+        "custom/left-media-arrow",
+        "mpris",
+        "custom/right-media-arrow",
+
+        "custom/next-track",
         "custom/right-arrow"
     ],
     
-    "clock": {
+    "mpris": {
         "interval": 1,
-        "format": "{:%H:%M:%S}"
+        "format": "{player_icon}  {artist} - {title}",
+        "title-len": 18,
+        "tooltip-format": "{position} - {length}",
+
+        "player-icons": {
+            "spotify": "",
+            "firefox": "",
+            "default": ""
+        },
+
+        "status-icons": {
+            "stopped": "!"
+        },
+
+        "ignored-players": [
+             ""
+        ]
     }
 }

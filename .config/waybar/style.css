@@ -5,7 +5,7 @@
     font-size: 14px;
     font-weight: bold;
 
-    color: #FFFFFF;
+    color: @main-fg;
 
     margin: 0;
     padding: 0;
@@ -19,9 +19,18 @@ window#waybar {
     color: #cba6f7;
 }
 
+#clock, 
+#mpris, 
+#user, 
+#memory, 
+#network,
+#cpu {
+    padding: 0 4px;
+}
+
 #custom-distro {
     margin: 4px 5px;
-    padding: 0 12px 0 9px;
+    padding: 0 9px 0 8px;
 
     color: #1793d1;
     font-size: 20px;
@@ -36,16 +45,35 @@ window#waybar {
     /* cursor: pointer; */
 }
 
-#custom-left-arrow, #custom-right-arrow {
-    margin-bottom: 0;
-    text-shadow: -2px 0 2px rgba(0,0,0,0.5);
+/* Arrow styling */
+#custom-left-media-arrow,
+#custom-right-media-arrow,
+#custom-right-workspace-arrow,
+#custom-right-clock-arrow,
+#custom-left-arrow,
+#custom-left-user-arrow,
+#custom-left-cpu-arrow,
+#custom-left-memory-arrow,
+#custom-right-arrow {
     font-size: 25px;
-
     color: lighter(@main-bg);
+    
 }
 
-#custom-right-arrow {
-    margin-right: 5px;
+
+#custom-left-arrow,
+#custom-left-media-arrow,
+#custom-left-user-arrow,
+#custom-left-cpu-arrow,
+#custom-left-memory-arrow {
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+#custom-right-arrow, 
+#custom-right-media-arrow,
+#custom-right-workspace-arrow,
+#custom-right-clock-arrow {
+    padding-right: 2px; /* For the shadow to work */
     text-shadow: 2px 0 2px rgba(0,0,0,0.5);
 }
 
@@ -53,14 +81,16 @@ window#waybar {
     margin-left: 8px;
 }
 
+/* Workspaces */
 #workspaces {
-    background: lighter(@main-bg); 
+    background: @workspace-bg; 
 }
 
 #workspaces button {
     margin: 3px;
     padding: 0 10px;
-    
+   
+    background: transparent;
     transition: background 0.2s ease-in;
 }
 
@@ -68,7 +98,104 @@ window#waybar {
     background: #6652A3;
 }
 
+#workspaces button.active {
+    box-shadow: inset 0 -2px #7688BC;
+    background: @workspace-button-active;
+}
+
+#custom-right-workspace-arrow {
+    color: @workspace-bg;
+    background: @clock-bg;
+}
+
+.modules-left #custom-left-arrow {
+    color: @workspace-bg;
+}
+
+/* Clock */
 #clock {
+    background: @clock-bg;
+    color: @clock-fg;
+}
+
+#custom-right-clock-arrow {
+    color: @clock-bg;
+    background: transparent;
+}
+
+/* Media Control */
+#mpris {
     background: lighter(@main-bg);
-    color: #4B7777;
+    opacity: 1
+}
+
+#mpris.spotify {
+    color: #1ED760;
+}
+
+#mpris.firefox {
+    color: #FF6611;
+}
+
+#custom-previous-track, #custom-next-track {
+    padding: 0 8px;
+    font-size: 24px;
+    background: @media-control-bg;
+}
+
+#custom-left-media-arrow, #custom-right-media-arrow {
+    background: @media-control-bg;
+}
+
+.modules-center 
+#custom-left-arrow,
+#custom-right-arrow {
+    color: @media-control-bg;
+    background: transparent;
+}
+
+/* Right configuration */
+/* User */
+#user {
+    background: @user-bg;
+}
+
+#custom-left-user-arrow {
+    background: @user-bg;
+}
+
+.modules-right #custom-left-arrow {
+    color: @user-bg;
+}
+
+/* Volume Slider */
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+
+    background-image: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 100px;
+    border-radius: 5px;
+    background-color: black;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: green;
+}
+
+/* Power */
+#custom-power {
+    margin: 0 12px;
+    font-size: 20px;
+
+    transition: color 0.2s ease-in;
+}
+
+#custom-power:hover {
+    color: #000000;
 }

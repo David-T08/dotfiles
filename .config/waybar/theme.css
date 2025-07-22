@@ -1,1 +1,12 @@
 @define-color main-bg #1f1f1f;
+@define-color main-fg #FFFFFF;
+
+@define-color workspace-bg #2f2f2f;
+@define-color workspace-button-active #4f4f4f;
+
+
+@define-color media-control-bg #636D88;
+@define-color clock-bg #74AA9C;
+@define-color clock-fg #f0f0f0; /* #4B7777 */
+
+@define-color user-bg #0B5648;

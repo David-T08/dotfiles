@@ -1,3 +1,25 @@
 {
+    "include": [
+        "~/.config/waybar/modules/custom/arrows.jsonc",
+        "~/.config/waybar/modules/custom/power.jsonc"
+    ],
+
+    "modules-right": [
+        "custom/left-arrow",
+        "user",
+        "custom/left-user-arrow",
+        "cpu",
+        "custom/left-cpu-arrow",
+        "memory",
+        "custom/left-memory-arrow",
+        "network",
+        "custom/right-arrow",
+        "custom/power"
+    ],
+
+    "user": {
+        "format": "{user}",
+        "open-on-click": false
+    },
 
 }
