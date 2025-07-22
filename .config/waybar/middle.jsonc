@@ -1,0 +1,16 @@
+{
+    "include": [
+        "~/.config/waybar/modules/custom/arrows.jsonc"
+    ],
+
+    "modules-center": [
+        "custom/left-arrow",
+        "clock",
+        "custom/right-arrow"
+    ],
+    
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}"
+    }
+}

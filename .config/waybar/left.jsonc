@@ -1,0 +1,23 @@
+{
+    "include": [
+        "~/.config/waybar/modules/custom/distro.jsonc",
+        "~/.config/waybar/modules/custom/arrows.jsonc"
+    ],
+
+    "modules-left": [
+        "custom/distro",
+        "custom/left-arrow",
+        "hyprland/workspaces",
+        "custom/right-arrow",
+        "hyprland/window"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+    },
+
+    "hyprland/window": {
+        
+    }
+
+}

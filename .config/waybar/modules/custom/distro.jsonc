@@ -1,0 +1,8 @@
+{
+    "custom/distro": {
+        "format": "",
+        "tooltip-format": "testing\nnewline",
+
+        "on-click": "echo -e \"1. Update system\n2. blah blah\" | wofi --show=dmenu"
+    }
+}

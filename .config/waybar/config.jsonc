@@ -1,0 +1,13 @@
+{
+    "height": 30,
+    "spacing": 0,
+    "margin": "8 14 0 14",
+
+    "include": [
+        "~/.config/waybar/left.jsonc",
+        "~/.config/waybar/middle.jsonc",
+        "~/.config/waybar/right.jsonc"
+    ],
+
+    "reload_style_on_change": true
+}

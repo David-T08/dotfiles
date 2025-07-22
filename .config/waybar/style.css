@@ -1,0 +1,74 @@
+@import "theme.css";
+
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @main-bg;
+    border-radius: 8px;
+    color: #cba6f7;
+}
+
+#custom-distro {
+    margin: 4px 5px;
+    padding: 0 12px 0 9px;
+
+    color: #1793d1;
+    font-size: 20px;
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+
+#custom-distro:hover {
+    background-color: #313244;
+    box-shadow: inset 0 -2px #1793d1;
+    /* cursor: pointer; */
+}
+
+#custom-left-arrow, #custom-right-arrow {
+    margin-bottom: 0;
+    text-shadow: -2px 0 2px rgba(0,0,0,0.5);
+    font-size: 25px;
+
+    color: lighter(@main-bg);
+}
+
+#custom-right-arrow {
+    margin-right: 5px;
+    text-shadow: 2px 0 2px rgba(0,0,0,0.5);
+}
+
+#window {
+    margin-left: 8px;
+}
+
+#workspaces {
+    background: lighter(@main-bg); 
+}
+
+#workspaces button {
+    margin: 3px;
+    padding: 0 10px;
+    
+    transition: background 0.2s ease-in;
+}
+
+#workspaces button:hover {
+    background: #6652A3;
+}
+
+#clock {
+    background: lighter(@main-bg);
+    color: #4B7777;
+}
