@@ -19,7 +19,6 @@
     "mpris": {
         "interval": 1,
         "format": "{player_icon}  {artist} - {title}",
-        "title-len": 18,
         "tooltip-format": "{position} - {length}",
 
         "player-icons": {

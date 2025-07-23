@@ -5,6 +5,7 @@
     ],
 
     "modules-right": [
+        "pulseaudio",
         "custom/left-arrow",
         "user",
         "custom/left-user-arrow",
