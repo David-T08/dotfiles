@@ -19,7 +19,24 @@
     },
 
     "hyprland/window": {
-        
+        "format": "{}",
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "󰈹  $1",
+            "(.*) — Ablaze Floorp": "󰈹  $1",
+
+            // Discord specific
+            // Inside channel DMs
+            "(?:•|\\(\\d+\\)) Discord \\| @(.*)": "<span color=\"#5865F2\" size=\"x-large\" rise=\"-2.5pt\"> </span> Messaging: $1",
+            // Inside server channel
+            "(?:•|\\(\\d+\\)) Discord \\| #(.*) \\| (.*)": "<span color=\"#5865F2\" size=\"x-large\" rise=\"-2.5pt\"> </span> #$1 - $2",
+            // Any tab: Discord | Friends, etc..
+            "(?:•|\\(\\d+\\)) Discord \\| ([^#@]*)": "<span color=\"#5865F2\" size=\"x-large\" rise=\"-2.5pt\"> </span> $1",
+            // Just discord title
+            "(?:•|\\(\\d+\\)) Discord": "<span color=\"#5865F2\" size=\"x-large\" rise=\"-2.5pt\"> </span> Discord"
+
+            // VSC specific
+
+        }
     }
 
 }

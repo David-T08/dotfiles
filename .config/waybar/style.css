@@ -25,14 +25,14 @@ window#waybar {
 #memory, 
 #network,
 #cpu {
-    padding: 0 4px;
+    padding: 0 6px;
 }
 
 #custom-distro {
     margin: 4px 5px;
     padding: 0 9px 0 8px;
 
-    color: #1793d1;
+    color: @distro;
     font-size: 20px;
     border-radius: 6px;
 
@@ -42,7 +42,6 @@ window#waybar {
 #custom-distro:hover {
     background-color: #313244;
     box-shadow: inset 0 -2px #1793d1;
-    /* cursor: pointer; */
 }
 
 /* Arrow styling */
@@ -57,24 +56,23 @@ window#waybar {
 #custom-right-arrow {
     font-size: 25px;
     color: lighter(@main-bg);
-    
 }
-
 
 #custom-left-arrow,
 #custom-left-media-arrow,
 #custom-left-user-arrow,
 #custom-left-cpu-arrow,
 #custom-left-memory-arrow {
-    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+    padding-left: 3px;
+    text-shadow: -3px 0 2.5px rgba(0,0,0,0.25);
 }
 
 #custom-right-arrow, 
 #custom-right-media-arrow,
 #custom-right-workspace-arrow,
 #custom-right-clock-arrow {
-    padding-right: 2px; /* For the shadow to work */
-    text-shadow: 2px 0 2px rgba(0,0,0,0.5);
+    padding-right: 4px;
+    text-shadow: 3px 0 2.5px rgba(0,0,0,0.25);
 }
 
 #window {
@@ -87,7 +85,7 @@ window#waybar {
 }
 
 #workspaces button {
-    margin: 3px;
+    margin: 5px;
     padding: 0 10px;
    
     background: transparent;
@@ -123,10 +121,10 @@ window#waybar {
     background: transparent;
 }
 
-/* Media Control */
+/* Middle Configuration */
+/* Media Display */
 #mpris {
-    background: lighter(@main-bg);
-    opacity: 1
+    background: @media-display-bg;
 }
 
 #mpris.spotify {
@@ -137,6 +135,7 @@ window#waybar {
     color: #FF6611;
 }
 
+/* Media Controls */
 #custom-previous-track, #custom-next-track {
     padding: 0 8px;
     font-size: 24px;
@@ -144,6 +143,7 @@ window#waybar {
 }
 
 #custom-left-media-arrow, #custom-right-media-arrow {
+    color: @media-display-bg;
     background: @media-control-bg;
 }
 
@@ -162,10 +162,40 @@ window#waybar {
 
 #custom-left-user-arrow {
     background: @user-bg;
+    color: @cpu-bg;
 }
 
 .modules-right #custom-left-arrow {
     color: @user-bg;
+}
+
+/* CPU */
+#cpu {
+    background: @cpu-bg;
+}
+
+#custom-left-cpu-arrow {
+    background: @cpu-bg;
+    color: @mem-bg;
+}
+
+/* Memory */
+#memory {
+    background: @mem-bg
+}
+
+#custom-left-memory-arrow {
+    background: @mem-bg;
+    color: @net-bg;
+}
+
+/* Network */
+#network {
+    background: @net-bg;
+}
+
+.modules-right #custom-right-arrow {
+    color: @net-bg;
 }
 
 /* Volume Slider */

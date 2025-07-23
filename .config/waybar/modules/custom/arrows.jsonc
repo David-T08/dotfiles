@@ -1,41 +1,50 @@
 {
     // No background, they dont overlap
     "custom/left-arrow": {
-        "format": ""
+        "format": "",
+        "tooltip": false
     },
 
     "custom/right-arrow": {
-        "format": ""
+        "format": "",
+        "tooltip": false,
     },
 
     // Left arrows
     "custom/left-media-arrow": {
-        "format": ""
+        "format": "",
+        "tooltip": false
     },
 
     "custom/left-user-arrow": {
-        "format": ""
+        "format": "",
+        "tooltip": false
     },
     
     "custom/left-cpu-arrow": {
-        "format": ""
+        "format": "",
+        "tooltip": false
     },
 
     "custom/left-memory-arrow": {
-        "format": ""
+        "format": "",
+        "tooltip": false
     },
 
     // Right arrows
     "custom/right-media-arrow": {
-        "format": ""
+        "format": "",
+        "tooltip": false
     },
 
     "custom/right-workspace-arrow": {
-        "format": ""
+        "format": "",
+        "tooltip": false
     },
 
     "custom/right-clock-arrow": {
-        "format": ""
+        "format": "",
+        "tooltip": false
     }
 
 }
