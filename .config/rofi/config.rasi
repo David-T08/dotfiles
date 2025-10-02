@@ -1,0 +1,21 @@
+configuration {
+  modes: "combi";
+  combi-modes: "window,drun";
+  combi-hide-mode-prefix: true;
+
+  show-icons: true;
+  case-sensitive: false;
+
+  calc {
+      no-bold: false;
+      terse: true;
+
+      no-history: true;
+      no-persist-history: true;
+      calc-command-history: false;
+      calc-command: "wl-copy {result}";
+
+      hint-result: "result: ";
+      hint-welcome: "welcome: ";
+  }
+}

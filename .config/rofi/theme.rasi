@@ -1,0 +1,127 @@
+* {
+    font:                        "JetBrains Mono Nerd Font 10";
+    font-small:                        "JetBrains Mono Nerd Font 6";
+
+    background:                  #0f0f0f;
+    background-alt:              #2f2f2f;
+
+    foreground:                  #FFFFFF;
+    selected: #FF0000;
+    active: #00FF00;
+    urgent: #0000FF;
+}
+
+
+window {
+    transparency: "real";
+    border-radius: 8px;
+
+    width: 1000px;
+    enabled: true;
+    cursor: "default";
+
+    background-color: @background;
+}
+
+mainbox {
+    enabled: true;
+
+    background-color: transparent;
+    orientation: horizontal;
+
+    children: [ "textbox", "listbox" ];
+}
+
+textbox {
+    content: "                  -`\n                 .o+`\n                `ooo/\n               `+oooo:\n              `+oooooo:\n              -+oooooo+:\n            `/:-:++oooo+:\n           `/++++/+++++++:\n          `/++++++++++++++:\n         `/+++ooooooooooooo/`\n        ./ooosssso++osssssso+`\n       .oossssso-````/ossssss+`\n      -osssssso.      :ssssssso.\n     :osssssss/        osssso+++.\n    /ossssssss/        +ssssooo/-\n  `/ossssso+/:-        -:/+osssso+-\n `+sso+:-`                 `.-/+oso:\n`++:.                           `-/+/\n.`                                 `/[1G[18A[41Cdavid@Arch\n[41C----------\n[41COS: Arch Linux x86_64\n[41CHost: Z790 AORUS ELITE AX\n[41CKernel: Linux 6.16.8-arch3-1\n[41CUptime: 3 hours, 53 mins\n[41CPackages: 1210 (pacman), 17 (flatpak)\n[41CShell: zsh 5.9\n[41CDisplay (XV273K V3): 3840x2160 in 27\", 160 Hz [External]\n[41CDisplay (X27U X2): 2560x1440 in 32\", 240 Hz [External]\n[41CDisplay (C27F591): 1920x1080 in 27\", 60 Hz [External]\n[41CWM: Hyprland 0.51.1 (Wayland)\n[41CTheme: Fusion [Qt]\n[41CFont: Noto Sans (12pt) [Qt]\n[41CCursor: Adwaita\n[41CTerminal: kitty 0.43.1\n[41CTerminal Font: JetBrainsMonoNF-Regular (10pt)\n[41CCPU: Intel(R) Core(TM) i9-14900KF (32) @ 6.00 GHz\n[41CGPU: NVIDIA GeForce RTX 3080 Ti [Discrete]\n[41CMemory: 14.87 GiB / 31.16 GiB (48%)\n[41CSwap: Disabled\n[41CDisk (/): 270.02 GiB / 915.32 GiB (30%) - ext4\n[41CLocal IP (enp5s0): 192.168.0.249/24\n[41CLocale: en_US.UTF-8\n[41C\n[41C[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m\n[41C[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m";
+    font: @font-small;
+}
+
+listbox {
+    spacing: 20px;
+    padding: 20px;
+
+    children: [ "message", "listview"];
+}
+
+listview {
+    children: [ "entry" ];
+}
+
+// element normal.normal {
+//     background-color: var(normal-background);
+//     text-color:       var(normal-foreground);
+// }
+// element normal.urgent {
+//     background-color: var(urgent-background);
+//     text-color:       var(urgent-foreground);
+// }
+// element normal.active {
+//     background-color: var(active-background);
+//     text-color:       var(active-foreground);
+// }
+
+// element selected.normal {
+//     background-color: var(selected-normal-background);
+//     text-color:       var(selected-normal-foreground);
+// }
+// element selected.urgent {
+//     background-color: var(selected-urgent-background);
+//     text-color:       var(selected-urgent-foreground);
+// }
+// element selected.active {
+//     background-color: var(selected-active-background);
+//     text-color:       var(selected-active-foreground);
+// }
+
+// element alternate.normal {
+//     background-color: var(alternate-normal-background);
+//     text-color:       var(alternate-normal-foreground);
+// }
+// element alternate.urgent {
+//     background-color: var(alternate-urgent-background);
+//     text-color:       var(alternate-urgent-foreground);
+// }
+// element alternate.active {
+//     background-color: var(alternate-active-background);
+//     text-color:       var(alternate-active-foreground);
+// }
+
+element-text {
+    background-color: transparent;
+    cursor:           inherit;
+    highlight:        inherit;
+    text-color:       inherit;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             1.0000em ;
+    cursor:           inherit;
+    text-color:       inherit;
+}
+
+listview {
+    padding:      8px 0px 0px ;
+    scrollbar:    true;
+    // border-color: var(separatorcolor);
+    spacing:      2px ;
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+}
+
+scrollbar {
+    width:        4px ;
+    padding:      0px 4px;
+    handle-width: 8px ;
+    border:       0;
+
+    border-radius: 24px;
+
+    // handle-color: var(normal-foreground);
+}
+
+sidebar {
+    // border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+}
