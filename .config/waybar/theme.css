@@ -6,6 +6,8 @@
 @define-color workspace-bg #2f2f2f;
 @define-color workspace-button-active #4f4f4f;
 
+@define-color battery-bg #576793;
+
 @define-color media-display-bg #3B4252;
 @define-color media-control-bg #636D88;
 @define-color clock-bg #74AA9C;

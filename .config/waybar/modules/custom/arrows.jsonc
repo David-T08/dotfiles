@@ -16,6 +16,11 @@
         "tooltip": false
     },
 
+    "custom/left-battery-arrow": {
+        "format": "",
+        "tooltip": false
+    },
+
     "custom/left-user-arrow": {
         "format": "",
         "tooltip": false
@@ -33,6 +38,11 @@
 
     // Right arrows
     "custom/right-media-arrow": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/right-track-arrow": {
         "format": "",
         "tooltip": false
     },

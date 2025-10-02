@@ -53,12 +53,15 @@ window#waybar {
 #custom-left-user-arrow,
 #custom-left-cpu-arrow,
 #custom-left-memory-arrow,
+#custom-left-battery-arrow,
+#custom-right-track-arrow,
 #custom-right-arrow {
     font-size: 25px;
     color: lighter(@main-bg);
 }
 
 #custom-left-arrow,
+#custom-left-battery-arrow,
 #custom-left-media-arrow,
 #custom-left-user-arrow,
 #custom-left-cpu-arrow,
@@ -67,7 +70,8 @@ window#waybar {
     text-shadow: -3px 0 2.5px rgba(0,0,0,0.25);
 }
 
-#custom-right-arrow, 
+#custom-right-arrow,
+#custom-right-track-arrow,
 #custom-right-media-arrow,
 #custom-right-workspace-arrow,
 #custom-right-clock-arrow {
@@ -122,6 +126,23 @@ window#waybar {
 }
 
 /* Middle Configuration */
+
+/* Battery */
+.modules-center
+#custom-left-arrow {
+    color: @battery-bg;
+}
+
+#battery {
+    background: @battery-bg;
+}
+
+#custom-left-battery-arrow {
+    background: @battery-bg;
+    color: @media-control-bg;
+
+}
+
 /* Media Display */
 #mpris {
     background: @media-display-bg;
@@ -147,12 +168,21 @@ window#waybar {
     background: @media-control-bg;
 }
 
-.modules-center 
-#custom-left-arrow,
-#custom-right-arrow {
+#custom-right-track-arrow {
     color: @media-control-bg;
-    background: transparent;
+    background: @battery-bg;
 }
+
+/* Pulseaudio */
+#pulseaudio {
+    background: @battery-bg;
+}
+
+.modules-center 
+#custom-right-arrow {
+    color: @battery-bg;
+}
+
 
 /* Right configuration */
 /* User */
